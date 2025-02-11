@@ -1,14 +1,15 @@
+
 import type { Metadata } from 'next'
  
 // These styles apply to every route in the application
-import './globals.css'
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar';
+import { ThemeProviderWrapper } from './themes/ThemeContext';
  
 const navigation = [
-  { name: "Dashboard", href: "#", current: true },
-  { name: "Team", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Calendar", href: "#", current: false },
+  { name: "Home", href: "#", current: true },
+  { name: "Paginas web", href: "#", current: false },
+  { name: "Apps moviles", href: "#", current: false },
+  { name: "Contactanos", href: "#", current: false },
 ];
 
 export const metadata: Metadata = {
@@ -24,8 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-      <Navbar navigation={navigation} />
+      <ThemeProviderWrapper>
+      <Navbar navigation={navigation}/>
         {children}
+      </ThemeProviderWrapper>
         </body>
     </html>
   )
