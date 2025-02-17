@@ -39,7 +39,7 @@ export const Landing: React.FC = () => {
     return (
         <Box
             sx={{
-                height: "90vh",
+                height: "100vh",
                 display: "flex",
                 justifyContent: "center",
                 backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url('./portada.png')`,
@@ -56,15 +56,17 @@ export const Landing: React.FC = () => {
                     width: '100%',
                     p: 3,
                     borderRadius: 2,
+                    display: "flex",
+                justifyContent: "center",
+                alignItems: 'center'
                 }}
             >
-                <Grid size={5}
+                <Grid size={{xs: 12, sm: 8, md: 5}}
                     sx={{
                         display: "flex",
                         flexDirection: 'column',
-                        justifyContent: 'flex-end'
+                        justifyContent: 'center'
                     }}>
-
 
                     <Grid
                         size={4}
@@ -112,8 +114,8 @@ export const Landing: React.FC = () => {
                                             src={item.img}
                                             alt="Diseño Web"
                                             sx={{
-                                                width: 250,
-                                                height: 250,
+                                                width: '100%',
+                                                height: '100%',
                                                 borderRadius: "50%",
                                                 opacity: 0.9,
                                                 mb: 0,
@@ -127,9 +129,9 @@ export const Landing: React.FC = () => {
                                                 mx: "auto", 
                                                 mb: 1}} />
                                         <Typography
-                                            variant="h5" // Puedes probar con h4 si quieres aún más grande
+                                            variant="h5" 
                                             sx={{
-                                                fontSize: "1.8rem", // Tamaño personalizado (ajusta según necesites)
+                                                fontSize: { xs: "1.2rem", sm: "1.5rem", md: "1.8rem", lg: "1.8rem", xl: "1.8rem" },
                                                 fontWeight: 900, // Hace el texto más grueso
                                                 color: "white",
                                                 mb: 3,
@@ -147,7 +149,7 @@ export const Landing: React.FC = () => {
 
                 </Grid>
 
-                <Grid size={7}
+                <Grid size={{xs: 12, sm: 12, md: 7}}
                     sx={{
                         display: "flex",
                         alignItems: "center",
@@ -181,29 +183,47 @@ export const Landing: React.FC = () => {
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        flexDirection: 'column'
+                        flexDirection: 'column',
+                        p: 1
                         }}
                     >
                         <Typography
                             variant="h4"
-                            fontWeight="bold"
                             sx={{
-                                fontWeight: 700
+                                fontSize: { xs: "1.2rem", sm: "1.5rem", md: "1.8rem", lg: "2rem", xl: "2.5rem" },
+                                fontWeight: 900
                             }}
                         >
                             Impulsa tu negocio con una página web
                         </Typography>
 
-                        <Typography variant="h6" mt={2} mb={8}>
+                        <Typography 
+                        variant="h6" mt={2}
+                        sx={{
+                            mb: {xs: 2,sm: 5, md: 8},
+                            fontSize: { xs: "0.8rem", sm: "1.2rem", md: "1rem", lg: "1.5rem", xl: "1.5rem" },
+                            fontWeight: 300
+                        }}>
                             Aumenta tu visibilidad, atrae más clientes y mejora tus ventas con una plataforma profesional adaptada a tus necesidades.
                         </Typography>
-                        <IconButton aria-label="delete" sx={{ backgroundColor: 'green', width: 80, height: 80 }}>
+                        <IconButton 
+                        aria-label="delete" 
+                        sx={{ 
+                            backgroundColor: 'green', 
+                            width: {xs: 50, sm: 80}, 
+                            height: {xs: 50, sm: 80}, }}>
                             <WhatsApp sx={{
-                                width: 50, height: 50,
+                                width: {xs: 30, sm: 50}, 
+                                height: {xs: 30, sm: 50},
                                 color: 'white'
                             }} />
                         </IconButton>
-                        <Typography variant="h6" mt={2}>
+                        <Typography variant="h6" mt={2} 
+                        sx={{
+                            mb: {xs: 2,sm: 5, md: 8},
+                            fontSize: { xs: "0.8rem", sm: "1.5rem", md: "1.5rem", lg: "1.5rem", xl: "1.5rem" },
+                            fontWeight: 1000,
+                        }}>
                             Escribenos y conoce mas nuestro servicios
                         </Typography>
                     </Grid>

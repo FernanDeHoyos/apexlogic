@@ -60,7 +60,6 @@ const Navbar: React.FC<NavbarProps> = ({ navigation }) => {
   // Contenido del Drawer (menú móvil)
   const drawer = (
     <Box
-      onClick={handleDrawerToggle}
       sx={{
         textAlign: "center",
       }}
@@ -74,7 +73,17 @@ const Navbar: React.FC<NavbarProps> = ({ navigation }) => {
           py: 1,
         }}
       >
-        <Typography variant="h6">Company Logo</Typography>
+        <Box
+          component="img"
+          src={"./logo_base.png"}
+          alt="Logo"
+          sx={{
+            height: 30,
+            width: "auto",
+            cursor: "pointer",
+            padding: 0,
+          }}
+        />
         <IconButton onClick={handleDrawerToggle}>
           <CloseIcon />
         </IconButton>
@@ -120,7 +129,7 @@ const Navbar: React.FC<NavbarProps> = ({ navigation }) => {
 
             <Box
               component="img"
-              src={"./logo_l.png" }
+              src={"./logo_v1.png"}
               alt="Logo"
               sx={{ height: 40, width: "auto", cursor: "pointer", padding: 0 }}
             />
@@ -129,22 +138,22 @@ const Navbar: React.FC<NavbarProps> = ({ navigation }) => {
             <Box sx={{ display: { xs: "none", sm: "flex" } }}>
               {navigation.map((item) => (
                 <Button
-                key={item.name}
-                disableRipple // Elimina el efecto de onda
-                disableElevation // Quita la sombra en hover
-                sx={{
-                  my: 2,
-                  color: theme.palette.primary.main,
-                  backgroundColor: "transparent", // Sin fondo
-                  "&:hover": {
-                    backgroundColor: "transparent", // Evita cambios de color en hover
-                  },
-                  textTransform: "none",
-                  boxShadow: "none", // Asegura que no haya sombras
-                }}
-              >
-                {item.name}
-              </Button>
+                  key={item.name}
+                  disableRipple // Elimina el efecto de onda
+                  disableElevation // Quita la sombra en hover
+                  sx={{
+                    my: 2,
+                    color: theme.palette.primary.main,
+                    backgroundColor: "transparent", // Sin fondo
+                    "&:hover": {
+                      backgroundColor: "transparent", // Evita cambios de color en hover
+                    },
+                    textTransform: "none",
+                    boxShadow: "none", // Asegura que no haya sombras
+                  }}
+                >
+                  {item.name}
+                </Button>
               ))}
             </Box>
           </Box>
