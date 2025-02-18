@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme, PaletteMode } from "@mui/material/styles";
 import '@fontsource-variable/comfortaa';
 
 
@@ -15,7 +15,7 @@ const lightTheme = {
     body2: { fontFamily: "'Comfortaa Variable', system-ui" },
   },
   palette: {
-    mode: "light",
+    mode: "light" as PaletteMode, 
     primary: { 
       main: "#1976d2" 
     },
@@ -42,7 +42,7 @@ const darkTheme = {
     body2: { fontFamily: "'Comfortaa Variable', system-ui" },
   },
   palette: {
-    mode: "dark",
+    mode: "dark" as PaletteMode,
     primary: { 
       main: "#90caf9" 
     },
