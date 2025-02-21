@@ -24,9 +24,9 @@ const responsive = {
 };
 
 const carouselItems = [
-    { img: "./diseño.png", name: "Diseño Web" },
-    { img: "./SEO.png", name: "SEO Optimizado" },
-    { img: "./marketing.png", name: "Marketing Digital" }
+    { img: "./diseño.webp", name: "Diseño Web" },
+    { img: "./SEO.webp", name: "SEO Optimizado" },
+    { img: "./marketing.webp", name: "Marketing Digital" }
 ];
 
 
@@ -50,7 +50,7 @@ export const Landing: React.FC = () => {
                 height: "100vh",
                 display: "flex",
                 justifyContent: "center",
-                backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url('./portada.png')`,
+                backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url('./portada.webp')`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 color: "white",

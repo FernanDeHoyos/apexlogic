@@ -49,10 +49,14 @@ const darkTheme = {
   palette: {
     mode: "dark" as PaletteMode,
     primary: { 
-      main: "#90caf9" 
+      main: "#90caf9"
     },
     secondary: { 
       main: "#f48fb1" 
+    },
+    custom: {
+      main: "#ff9800", // Naranja
+      contrastText: "#fff", // Texto en el botón
     },
     text: {
       primary: "#808080", // Color principal del texto

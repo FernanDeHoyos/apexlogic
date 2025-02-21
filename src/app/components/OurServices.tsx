@@ -39,6 +39,7 @@ export const OurServices: React.FC = () => {
                 linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
               `,
+              backgroundSize: "300px 300px",
                 backgroundColor: theme.palette.background.paper,
                 display: "flex",
                 justifyContent: "center",

@@ -8,13 +8,13 @@ import { useTheme } from "@mui/material/styles";
 
 const items = [
     {
-        image: "./web.jpg",
+        image: "./web.webp",
         title: "Desarrollo Web",
         text: "Creamos sitios web a medida, optimizados para velocidad, SEO y experiencia de usuario, ayudando a impulsar tu negocio en el mundo digital."
     },
 
     {
-        image: "./app.jpg",
+        image: "./app.webp",
         title: "Desarrollo Móvil",
         text: "Diseñamos y desarrollamos aplicaciones móviles nativas e híbridas para iOS y Android, brindando soluciones innovadoras y funcionales."
     },
@@ -72,7 +72,7 @@ export const AboutUs: React.FC = () => {
                     >
                         <Box
                             component="img"
-                            src={"./logo_base.png"}
+                            src={"./logo_base.webp"}
                             alt="Logo"
                             sx={{
                                 height: 223,

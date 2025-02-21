@@ -4,13 +4,14 @@ import type { Metadata } from 'next'
 // These styles apply to every route in the application
 import Navbar from './components/Navbar';
 import { ThemeProviderWrapper } from './themes/ThemeContext';
+import { Footer } from './components/Footer';
  
 const navigation = [
   { name: "Home", href: "/", current: true },
-  { name: "Paginas web", href: "/paginas-web", current: false },
-  { name: "Apps moviles", href: "apps-moviles", current: false },
-  { name: "Nosotros", href: "/nosotros", current: false },
-  { name: "Contactanos", href: "/contacto", current: false },
+  { name: "Paginas web", href: "/web-development", current: false },
+  { name: "Apps moviles", href: "movile-development", current: false },
+  { name: "Nosotros", href: "/about-us", current: false },
+  { name: "Contactanos", href: "/contact", current: false },
 ];
 
 export const metadata: Metadata = {
@@ -29,6 +30,7 @@ export default function RootLayout({
       <ThemeProviderWrapper>
       <Navbar navigation={navigation}/>
         {children}
+        <Footer/>
       </ThemeProviderWrapper>
         </body>
     </html>

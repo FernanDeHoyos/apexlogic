@@ -75,7 +75,7 @@ const Navbar: React.FC<NavbarProps> = ({ navigation }) => {
       >
         <Box
           component="img"
-          src={"./logo_base.png"}
+          src={"./logo_base.webp"}
           alt="Logo"
           sx={{
             height: 30,
@@ -129,9 +129,9 @@ const Navbar: React.FC<NavbarProps> = ({ navigation }) => {
 
             <Box
               component="img"
-              src={"./logo_v1.png"}
+              src={"./logo.webp"}
               alt="Logo"
-              sx={{ height: 40, width: "auto", cursor: "pointer", padding: 0 }}
+              sx={{ height: 50, width: "auto", cursor: "pointer", padding: 0 }}
             />
 
             {/* Enlaces visibles en pantallas grandes */}

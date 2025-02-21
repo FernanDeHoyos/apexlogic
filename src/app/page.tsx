@@ -1,5 +1,5 @@
 import { AboutUs } from "./components/AboutUs";
-import { Footer } from "./components/Footer";
+import { ContactForm } from "./components/ContactForm";
 import { Landing } from "./components/landing";
 import { OurServices } from "./components/OurServices";
 
@@ -10,7 +10,7 @@ export default function Home() {
       <Landing/>
       <AboutUs/> 
       <OurServices/>
-      <Footer/>
+      <ContactForm/>
     </main>
   );
 }
