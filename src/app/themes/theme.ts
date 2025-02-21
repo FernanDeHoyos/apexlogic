@@ -4,6 +4,7 @@ import '@fontsource-variable/comfortaa';
 
 const lightTheme = {
   typography: {
+    color: "#ffffff",
     fontFamily: "'Comfortaa Variable', system-ui",
     h1: { fontFamily: "'Comfortaa Variable', system-ui" },
     h2: { fontFamily: "'Comfortaa Variable', system-ui" },
@@ -22,7 +23,10 @@ const lightTheme = {
     secondary: { 
       main: "#dc004e" 
     },
-    
+    text: {
+      primary: "#000000", // Color principal del texto
+      secondary: "#bdbdbd", // Color secundario del texto
+    },
     background: { 
       default: "#f5f5f5", 
       paper: "#ffffff" },
@@ -31,6 +35,7 @@ const lightTheme = {
 
 const darkTheme = {
   typography: {
+    color: "#ffffff",
     fontFamily: "'Comfortaa Variable', system-ui",
     h1: { fontFamily: "'Comfortaa Variable', system-ui" },
     h2: { fontFamily: "'Comfortaa Variable', system-ui" },
@@ -49,7 +54,10 @@ const darkTheme = {
     secondary: { 
       main: "#f48fb1" 
     },
-    
+    text: {
+      primary: "#808080", // Color principal del texto
+      secondary: "#bdbdbd", // Color secundario del texto
+    },
     background: { 
       default: "#121212", 
       paper: "#1e1e1e" },

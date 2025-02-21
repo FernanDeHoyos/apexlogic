@@ -7,6 +7,8 @@ import CardMedia from '@mui/material/CardMedia';
 import CardActionArea from '@mui/material/CardActionArea';
 import { Typography } from "@mui/material";
 import Grid  from "@mui/material/Grid2";
+import { useTheme } from "@mui/material/styles";
+
 
 interface CardItems {
     image: string;
@@ -19,6 +21,8 @@ interface CardProps {
 }
 
 export const Cards: React.FC<CardProps> = ({ items }) => {
+    const theme = useTheme()
+
     return (
         <Grid container spacing={2}
         sx={{
@@ -39,11 +43,11 @@ export const Cards: React.FC<CardProps> = ({ items }) => {
                                 alt={item.title}
                             />
                             <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
+                                <Typography color={theme.palette.text.primary} gutterBottom variant="h5" component="div">
                                     {item.title}
                                 </Typography>
                                 {item.text && ( // Solo muestra el texto si está definido
-                                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                                    <Typography color={theme.palette.text.primary} variant="body2" >
                                         {item.text}
                                     </Typography>
                                 )}

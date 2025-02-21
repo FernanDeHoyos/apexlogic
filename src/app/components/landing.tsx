@@ -34,6 +34,14 @@ const carouselItems = [
 
 export const Landing: React.FC = () => {
 
+    const OnHandleWhatsapp = () => {
+        const phoneNumber = "573136601690"; 
+        const message = "Hola, me gustaría obtener más información."; 
+    
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        
+        window.open(whatsappUrl, "_blank"); 
+    };
 
 
     return (
@@ -57,11 +65,11 @@ export const Landing: React.FC = () => {
                     p: 3,
                     borderRadius: 2,
                     display: "flex",
-                justifyContent: "center",
-                alignItems: 'center'
+                    justifyContent: "center",
+                    alignItems: 'center'
                 }}
             >
-                <Grid size={{xs: 12, sm: 8, md: 5}}
+                <Grid size={{ xs: 12, sm: 8, md: 5 }}
                     sx={{
                         display: "flex",
                         flexDirection: 'column',
@@ -121,15 +129,16 @@ export const Landing: React.FC = () => {
                                                 mb: 0,
                                             }}
                                         />
-                                        <Divider 
-                                            sx={{ 
-                                                width: "100%", 
+                                        <Divider
+                                            sx={{
+                                                width: "100%",
                                                 bgcolor: "white",
-                                                p: 0.1, 
-                                                mx: "auto", 
-                                                mb: 1}} />
+                                                p: 0.1,
+                                                mx: "auto",
+                                                mb: 1
+                                            }} />
                                         <Typography
-                                            variant="h5" 
+                                            variant="h5"
                                             sx={{
                                                 fontSize: { xs: "1.2rem", sm: "1.5rem", md: "1.8rem", lg: "1.8rem", xl: "1.8rem" },
                                                 fontWeight: 900, // Hace el texto más grueso
@@ -149,7 +158,7 @@ export const Landing: React.FC = () => {
 
                 </Grid>
 
-                <Grid size={{xs: 12, sm: 12, md: 7}}
+                <Grid size={{ xs: 12, sm: 12, md: 7 }}
                     sx={{
                         display: "flex",
                         alignItems: "center",
@@ -180,50 +189,58 @@ export const Landing: React.FC = () => {
 
                     <Grid
                         sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexDirection: 'column',
-                        p: 1
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            flexDirection: 'column',
+                            p: 1
                         }}
                     >
                         <Typography
                             variant="h4"
                             sx={{
+                                pt: 3,
                                 fontSize: { xs: "1.2rem", sm: "1.5rem", md: "1.8rem", lg: "2rem", xl: "2.5rem" },
                                 fontWeight: 900
                             }}
                         >
-                            Impulsa tu negocio con una página web
+                            SUBE AL SIGUIENTE NIVEL
                         </Typography>
 
-                        <Typography 
-                        variant="h6" mt={2}
-                        sx={{
-                            mb: {xs: 2,sm: 5, md: 8},
-                            fontSize: { xs: "0.8rem", sm: "1.2rem", md: "1rem", lg: "1.5rem", xl: "1.5rem" },
-                            fontWeight: 300
-                        }}>
+                        <Typography
+                            variant="h6" mt={2}
+                            sx={{
+                                mb: { xs: 2, sm: 5, md: 8 },
+                                fontSize: { xs: "0.8rem", sm: "1.2rem", md: "1rem", lg: "1.2rem", xl: "1.2rem" },
+                                fontWeight: 'bold'
+                            }}>
                             Aumenta tu visibilidad, atrae más clientes y mejora tus ventas con una plataforma profesional adaptada a tus necesidades.
                         </Typography>
-                        <IconButton 
-                        aria-label="delete" 
-                        sx={{ 
-                            backgroundColor: 'green', 
-                            width: {xs: 50, sm: 80}, 
-                            height: {xs: 50, sm: 80}, }}>
+                        <IconButton
+                            onClick={OnHandleWhatsapp}
+                            aria-label="delete"
+                            sx={{
+                                backgroundColor: 'green',
+                                width: { xs: 50, sm: 80 },
+                                height: { xs: 50, sm: 80 },
+                                transition: "background-color 0.3s ease-in-out",
+                                '&:hover': {
+                                    backgroundColor: "darkgreen",
+                                    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.3)",
+                                }
+                            }}>
                             <WhatsApp sx={{
-                                width: {xs: 30, sm: 50}, 
-                                height: {xs: 30, sm: 50},
+                                width: { xs: 30, sm: 50 },
+                                height: { xs: 30, sm: 50 },
                                 color: 'white'
                             }} />
                         </IconButton>
-                        <Typography variant="h6" mt={2} 
-                        sx={{
-                            mb: {xs: 2,sm: 5, md: 8},
-                            fontSize: { xs: "0.8rem", sm: "1.5rem", md: "1.5rem", lg: "1.5rem", xl: "1.5rem" },
-                            fontWeight: 1000,
-                        }}>
+                        <Typography variant="h6" mt={2}
+                            sx={{
+                                mb: { xs: 2, sm: 5, md: 8 },
+                                fontSize: { xs: "0.8rem", sm: "1.5rem", md: "1.5rem", lg: "1.5rem", xl: "1.5rem" },
+                                fontWeight: 1000,
+                            }}>
                             Escribenos y conoce mas nuestro servicios
                         </Typography>
                     </Grid>

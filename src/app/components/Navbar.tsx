@@ -22,6 +22,7 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import { useContext, useState } from "react";
 import { ThemeContext } from "../themes/ThemeContext";
 import { DarkMode, LightMode } from "@mui/icons-material";
+import { useRouter } from "next/navigation";
 
 interface NavItem {
   name: string;
@@ -34,6 +35,9 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ navigation }) => {
+
+  const router = useRouter();
+
   // Estado para el Drawer (menú en dispositivos móviles)
   const { mode, toggleTheme } = useContext(ThemeContext);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -107,7 +111,7 @@ const Navbar: React.FC<NavbarProps> = ({ navigation }) => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       {/* AppBar principal */}
-      <AppBar position="static" sx={{ backgroundColor: theme.palette.background.paper }}>
+      <AppBar position="fixed" sx={{ backgroundColor: theme.palette.background.paper }}>
         <Toolbar>
           {/* Botón del menú en móviles */}
           <IconButton
@@ -135,6 +139,7 @@ const Navbar: React.FC<NavbarProps> = ({ navigation }) => {
               {navigation.map((item) => (
                 <Button
                   key={item.name}
+                  onClick={() => router.push(item.href)}
                   disableRipple // Elimina el efecto de onda
                   disableElevation // Quita la sombra en hover
                   sx={{

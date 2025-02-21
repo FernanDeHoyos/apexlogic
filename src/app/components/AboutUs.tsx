@@ -56,7 +56,7 @@ export const AboutUs: React.FC = () => {
                 <Grid size={{ xs: 12, sm: 6 }}>
                     <Box
                         sx={{
-                            backgroundColor: "white",
+                            backgroundColor: 'rgba(0, 0, 0, 0.3)',
                             padding: 4,
                             borderRadius: 2,
                             boxShadow: 3,
@@ -65,6 +65,9 @@ export const AboutUs: React.FC = () => {
                             flexDirection: 'column',
                             alignItems: "center",
                             justifyContent: "center",
+                            '&:hover':{
+                                backgroundColor: 'rgba(0, 0, 0, 0.5)'
+                            }
                         }}
                     >
                         <Box
@@ -81,7 +84,7 @@ export const AboutUs: React.FC = () => {
                         <Typography variant="h4" fontWeight={700} color="primary" gutterBottom>
                             ¿Quiénes somos?
                         </Typography>
-                        <Typography variant="body1" color="gray">
+                        <Typography variant="body1" color={theme.palette.text.primary}>
                             Somos un equipo apasionado por el desarrollo de soluciones digitales innovadoras.
                             Nuestra misión es ayudar a empresas a crecer a través de tecnología de vanguardia.
                         </Typography>

@@ -6,10 +6,11 @@ import Navbar from './components/Navbar';
 import { ThemeProviderWrapper } from './themes/ThemeContext';
  
 const navigation = [
-  { name: "Home", href: "#", current: true },
-  { name: "Paginas web", href: "#", current: false },
-  { name: "Apps moviles", href: "#", current: false },
-  { name: "Contactanos", href: "#", current: false },
+  { name: "Home", href: "/", current: true },
+  { name: "Paginas web", href: "/paginas-web", current: false },
+  { name: "Apps moviles", href: "apps-moviles", current: false },
+  { name: "Nosotros", href: "/nosotros", current: false },
+  { name: "Contactanos", href: "/contacto", current: false },
 ];
 
 export const metadata: Metadata = {
